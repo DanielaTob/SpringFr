@@ -2,37 +2,38 @@ package com.example.demo;
 
 public class Triangle {
 
-    private String type;
-    private int height;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
 
-    //Constructor que se sobre pone sobre el otro
-    public Triangle(String type, int height){
-        this.type = type;
-        this.height = height;
-    }
-    public int getHeight() {
-        return height;
+
+    public Point getPointA() {
+        return pointA;
     }
 
-    //Constructor
-    public Triangle(int height){
-        this.height = height;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
     }
 
-    //Constructor
-    public Triangle(String type){
-        this.type = type;
+    public Point getPointB() {
+        return pointB;
     }
 
-    public String getType() {
-        return type;
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
     }
 
-    /*public void setType(String type) {
-        this.type = type;
-    }*/
+    public Point getPointC() {
+        return pointC;
+    }
+
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
+    }
 
     public void draw(){
-        System.out.println(getType() + " Triangle draw of height " + getHeight());
+        System.out.println("Point A = (" + getPointA().getX() + ", " + getPointA().getY() + ")");
+        System.out.println("Point B = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
+        System.out.println("Point C = (" + getPointC().getX() + ", " + getPointC().getY() + ")");
     }
 }
