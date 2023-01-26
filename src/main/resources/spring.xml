@@ -4,27 +4,21 @@
 <beans>
 
 
-    <bean id="triangle" class="com.example.demo.Triangle">
-       <property name="points" >
-           <list>
-               <ref bean="zeroPoint" />
-               <ref bean="point2" />
-               <ref bean="point3" />
-           </list>
-       </property>
+    <bean id="triangle" class="com.example.demo.Triangle" autowire="byName">
+
     </bean>
 
-    <bean id="zeroPoint" class="com.example.demo.Point">
+    <bean id="pointA" class="com.example.demo.Point">
         <property name="x" value="0" />
         <property name="y" value="0" />
     </bean>
 
-    <bean id="point2" class="com.example.demo.Point">
+    <bean id="pointB" class="com.example.demo.Point">
         <property name="x" value="-20" />
         <property name="y" value="0" />
     </bean>
 
-    <bean id="point3" class="com.example.demo.Point">
+    <bean id="pointC" class="com.example.demo.Point">
         <property name="x" value="20" />
         <property name="y" value="0" />
     </bean>
