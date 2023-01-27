@@ -1,5 +1,6 @@
 package com.example.demo;
 
+
 public class Point {
     private int x;
     private int y;

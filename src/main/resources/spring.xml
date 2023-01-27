@@ -9,8 +9,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:annotation-config/>
-
  <!--   <bean id="triangle" class="com.example.demo.Triangle">
         <property name="pointA" ref="pointA"/>
         <property name="pointB" ref="pointB"/>
@@ -28,16 +26,16 @@
         <property name="y" value="0" />
     </bean>
 
-    <bean id="pointC" class="com.example.demo.Point">
+    <bean id="center" class="com.example.demo.Point">
         <property name="x" value="20" />
         <property name="y" value="0" />
     </bean>
 
-    <bean id="circle" class="com.example.demo.Circle">
+<!--    <bean id="circle" class="com.example.demo.Circle">
 
     </bean>
 
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />-->
 
     <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />-->
 
@@ -45,6 +43,9 @@
         <property name="sides" ref="pointA"/>
     </bean>-->
 
+    <context:annotation-config/>
+    
+    <context:component-scan base-package="com.example.demo"/>
 
 
 </beans>
