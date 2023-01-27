@@ -21,9 +21,14 @@ public class DemoApplication {
 
         //- EJEMPLO CON APLICATION CONTEXT -
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        context.registerShutdownHook();
-        Triangle triangle = (Triangle) context.getBean("triangle");
-        triangle.draw();
+        Shape shape = (Shape) context.getBean("square");
+        shape.draw();
+        //Triangle triangle = (Triangle) context.getBean("triangle");
+        //Circle circle = (Circle) context.getBean("circle");
+        //triangle.draw();
+        //circle.draw();
+
+
 
         SpringApplication.run(DemoApplication.class, args);
     }

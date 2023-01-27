@@ -10,8 +10,8 @@
     </bean>
 
     <bean id="pointA" class="com.example.demo.Point">
-        <property name="x" value="${pointA.pointX}" />
-        <property name="y" value="${pointA.pointY}" />
+        <property name="x" value="0" />
+        <property name="y" value="0" />
     </bean>
 
     <bean id="pointB" class="com.example.demo.Point">
@@ -24,11 +24,14 @@
         <property name="y" value="0" />
     </bean>
 
-    <bean class="com.example.demo.MyBeanFactoryPP" />
-
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
-        <property name="locations" value="pointsconfig.properties"/>
+    <bean id="circle" class="com.example.demo.Circle">
+        <property name="center" ref="pointA"/>
     </bean>
+
+    <bean id="square" class="com.example.demo.Square">
+        <property name="sides" ref="pointA"/>
+    </bean>
+
 
 
 </beans>
