@@ -20,7 +20,7 @@ public class DemoApplication {
 
         //- EJEMPLO CON APLICATION CONTEXT -
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Triangle triangle = (Triangle) context.getBean("triangle");
+        Triangle triangle = (Triangle) context.getBean("triangle1");
         triangle.draw();
 
         SpringApplication.run(DemoApplication.class, args);

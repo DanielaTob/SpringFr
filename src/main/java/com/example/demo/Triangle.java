@@ -12,6 +12,7 @@ public class Triangle  implements ApplicationContextAware, BeanNameAware {
     private Point pointA;
     private Point pointB;
     private Point pointC;
+
     private ApplicationContext applicationContext = null;
 
 
@@ -55,4 +56,5 @@ public class Triangle  implements ApplicationContextAware, BeanNameAware {
     public void setBeanName(String beanName) {
         System.out.println("Bean name is: " + beanName);
     }
+
 }

@@ -3,9 +3,18 @@
 
 <beans>
 
+    <bean id="parenttriangle" class="com.example.demo.Triangle">
+        <property name="pointA" ref="pointA"/>
+    </bean>
 
-    <bean id="triangle" class="com.example.demo.Triangle" autowire="byName">
 
+    <bean id="triangle1" class="com.example.demo.Triangle" parent="parenttriangle">
+        <property name="pointB" ref="pointB"/>
+        <property name="pointC" ref="pointC"/>
+    </bean>
+
+    <bean id="triangle2" class="com.example.demo.Triangle" parent="parenttriangle">
+        <property name="pointB" ref="pointB"/>
     </bean>
 
     <bean id="pointA" class="com.example.demo.Point">
@@ -22,6 +31,5 @@
         <property name="x" value="20" />
         <property name="y" value="0" />
     </bean>
-
 
 </beans>
