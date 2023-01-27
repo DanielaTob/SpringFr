@@ -54,4 +54,7 @@ public class Triangle {
     public void myInit(){
         System.out.println("InitializingBean init method called for Triangle");
     }
+    public void cleanUp(){
+        System.out.println("Cleaning...");
+    }
 }
