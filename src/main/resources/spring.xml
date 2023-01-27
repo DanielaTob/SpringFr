@@ -3,25 +3,8 @@
 
 <beans>
 
-    <bean id="parenttriangle" class="com.example.demo.Triangle" abstract="true">
-        <property name="points">
-            <list>
-                <ref bean="pointA"/>
-            </list>
-        </property>
-    </bean>
+    <bean id="triangle" class="com.example.demo.Triangle" autowire="byName">
 
-
-    <bean id="triangle1" class="com.example.demo.Triangle" parent="parenttriangle">
-        <property name="points">
-            <list merge="true">
-                <ref bean="pointB"/>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="triangle2" class="com.example.demo.Triangle" parent="parenttriangle">
-        <property name="points" ref="pointB"/>
     </bean>
 
     <bean id="pointA" class="com.example.demo.Point">
@@ -38,5 +21,6 @@
         <property name="x" value="20" />
         <property name="y" value="0" />
     </bean>
+
 
 </beans>

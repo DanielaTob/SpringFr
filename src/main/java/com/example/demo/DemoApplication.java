@@ -5,6 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
@@ -19,8 +20,9 @@ public class DemoApplication {
         //triangle.draw();
 
         //- EJEMPLO CON APLICATION CONTEXT -
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Triangle triangle = (Triangle) context.getBean("triangle1");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        context.registerShutdownHook();
+        Triangle triangle = (Triangle) context.getBean("triangle");
         triangle.draw();
 
         SpringApplication.run(DemoApplication.class, args);
