@@ -21,7 +21,7 @@ public class DemoApplication {
 
         //- EJEMPLO CON APLICATION CONTEXT -
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Shape shape = (Shape) context.getBean("square");
+        Shape shape = (Shape) context.getBean("circle");
         shape.draw();
         //Triangle triangle = (Triangle) context.getBean("triangle");
         //Circle circle = (Circle) context.getBean("circle");
