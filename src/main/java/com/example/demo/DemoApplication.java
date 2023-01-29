@@ -20,8 +20,9 @@ public class DemoApplication {
         //triangle.draw();
 
         //- EJEMPLO CON APLICATION CONTEXT -
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        context.registerShutdownHook();
+        //AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        //context.registerShutdownHook();
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Shape shape = (Shape) context.getBean("circle");
         shape.draw();
         //Triangle triangle = (Triangle) context.getBean("triangle");
@@ -35,3 +36,4 @@ public class DemoApplication {
     }
 
 }
+
